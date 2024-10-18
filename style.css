@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: .9375rem;
+    list-style: none;
+}
+body{
+    text-transform: capitalize;
+    background-color: #cccccc;
+}
+.header{
+    /* background-color: #1b3039; */
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.header .logo{
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+}
+
+.header .logo img{
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header nav{
+    order: 1;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 1.25rem;    
+}
+
+.header .nav-links li:nth-child(1){
+    padding: 0 1.25rem 0 0;
+}
+
+.header .nav-links li:hover
+,.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: .875rem;
+    color: #cccccc;
+    text-transform: uppercase;
+
+}
+/* .header .nav-links li a:hover{
+    color: #675bf9;
+} */
+nav ul li a{
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cccccc;
+    text-decoration: none;
+    }
+
+nav ul li a:hover{
+    border-bottom: 4px solid #751616;
+}
+
+.header .btn{
+    order: 2;
+}
+.menu{
+    display: none;
+}
+
+.header .btn button,
+.header .menu button {
+    margin-left: 1.25rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    padding: .5625rem 1.5625rem;
+    background: #ab1a1a;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: #751616;
+    color: #cccccc;
+    transform: scale(1.1);
+}
+
+
+/*PARTE DEL MENU*/
+
+header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0 , 0.9);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+
+} 
+
+.header .overlay a{
+    padding: 20px;
+    font-size: 20px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    color: #a7a7a7;
+
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: #751616;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 2.8125rem;
+    font-size: 4.0625rem;
+}
+
+@media screen and (max-height:450px){
+    .header .overlay a{
+        font-size: 20px;
+
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: .9375rem;
+        right: 2.1875rem;
+    }
+    
+}
+
+/* main{
+    min-height: 100vh;
+} */
+
+/*CSS DEL BANNER*/
+
+.banner {
+    background-image: url(images/banner\ principal.jpg);
+    padding: 50px 100px;
+    text-align: center;
+    color: #0d0d0d;
+}
+.banner h1 {
+    color: #751616;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+.banner p {
+    font-size: 28px;
+    font-style: oblique; 
+}
+.title-card h2{
+    color: #751616;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 50px ;
+}
+/*CSS DEL CARD*/
+.cont-body{
+    width: 100%;
+    height: 68vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.conten-card{
+width: 100%;
+display: flex;
+max-width: 1100px;
+
+}
+.card{
+    width: 100%;
+    margin: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #751616;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    transition: all 400ms ease;
+    
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: 210px;
+}
+.card .contenido{
+    padding: 15px;
+    
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.card .contenido h3{
+    font-weight: bold;
+}
+.card .contenido .precio {
+    font-weight: bold;
+    color: #0d0d0d;
+    margin-bottom: 15px;
+}
+.btn button{
+    margin-left: 1.25rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    padding: .5625rem 1.5625rem;
+    background: #ab1a1a;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+.btn button:hover{
+    background-color: #751616;
+    color: #cccccc;
+    transform: scale(1.1);
+}
+
+/*Css del Footer*/
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+
+}
+
+.footer{
+    background-color: #0d0d0d;
+    padding: 0.625rem 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 .9375rem;
+
+}
+
+.footer-links h4{
+    font-size: 1.25rem;
+    color: #cccccc;
+    margin-bottom: 1.5625rem;
+    font-weight: 500;
+    border-bottom: .125rem solid #751616;
+    padding-bottom: .625rem ; 
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: .9375rem;
+    transition: all .3s ease; 
+}
+
+.footer-links ul li a:hover{
+    color: #ffffff;
+    padding-left: .375rem;
+}
+.social-link a{ 
+    display: inline-block;
+    min-height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(255, 255, 255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease; 
+}
+
+.social-link a:hover{
+    background-color: #751616;
+}
+
+@media(max-width:991px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 1.875rem;
+    }
+
+}
+@media screen and (max-width:800px){
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+    .conten-card{
+        width: 60%;
+        flex-wrap: wrap;
+        
+        }
+}
+
